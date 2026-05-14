@@ -18,7 +18,7 @@ export const config = {
   ticker: ['Bangalore', 'Product Designer', 'Engineer', 'Researcher', 'Builder', 'Dreamer', "NID"],
 
   // ── Nav ──────────────────────────────────────────────────
-  resumeUrl: 'https://drive.google.com/file/d/1kKvL6Uk1ePnE_XN1Oe4znHIWthBYlQuG/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1FF7vAtSJYXluPgUydPB99DEVJM8iVSMN/view?usp=sharing',
 
   // ── Footer ───────────────────────────────────────────────
   footer: {
