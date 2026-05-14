@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-h: 52px;
+  --ticker-h: 34px;
+  --offset: 86px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F8F4;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Work card title swap on hover ── */
+.work-card-title-default {
+  display: block;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.work-card-title-hover {
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.work-card:hover .work-card-title-default {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+.work-card:hover .work-card-title-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Book card note overlay ── */
+.book-note-overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.book-card:hover .book-note-overlay {
+  opacity: 1;
+}
+.book-cover-img {
+  transition: transform 0.35s ease;
+}
+.book-card:hover .book-cover-img {
+  transform: scale(1.03);
+}
+
+/* ── Nav link underline ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #111111;
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Work card arrow ── */
+.work-arrow {
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.work-card:hover .work-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── Heart easter egg ── */
+.heart-particle {
+  pointer-events: none;
+  position: fixed;
+  font-size: 22px;
+  z-index: 9999;
+  animation: heartFloat 1.1s ease-out forwards;
+}
+@keyframes heartFloat {
+  0%   { opacity: 1; transform: translateY(0) scale(0.8); }
+  40%  { opacity: 1; transform: translateY(-50px) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-110px) scale(1); }
+}
+
+/* ── Tag pill ── */
+.tag {
+  font-size: 11px;
+  color: #888888;
+  border: 1px solid #E5E5E0;
+  border-radius: 4px;
+  padding: 1px 7px;
+  white-space: nowrap;
+  line-height: 1.8;
+}
+
+/* ── Horizontal scroll row (Featured Work / Playground) ── */
+.scroll-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  /* bleed to page edge so cards go full-width */
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+.scroll-row::-webkit-scrollbar { display: none; }
+.scroll-row { scrollbar-width: none; }
+
+/* ── Thumbnail work card ── */
+.work-thumb-card {
+  flex: none;
+  width: 290px;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.work-thumb-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+}
+.work-thumb-card:hover .thumb-img {
+  transform: scale(1.04);
+}
+.thumb-img {
+  transition: transform 0.35s ease;
+}
+
+/* ── Hero image ── */
+.hero-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F0F0EB;
+}
+
+/* ── Selection ── */
+::selection {
+  background: #111111;
+  color: #F8F8F4;
+}
