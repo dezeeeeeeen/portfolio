@@ -72,7 +72,7 @@ export default function Home() {
         />
         
          <ScrollRow>
-  {config.featuredWork.map(item => (
+  {config.sideProjects.map(item => (
     <WorkCardThumb key={item.slug} item={item} />
   ))}
 </ScrollRow>

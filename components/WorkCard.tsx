@@ -44,7 +44,7 @@ export default function WorkCard({ item }: Props) {
         {/* ── Thumbnail ── */}
         <div className="mt-2 overflow-hidden rounded-lg border border-border">
           <Image
-            src={`/project-thumbnails/${item.slug}.jpg`}
+            src={`/project-thumbnails/${item.slug}.png`}
             alt={item.titleShort}
             width={1200}
             height={800}

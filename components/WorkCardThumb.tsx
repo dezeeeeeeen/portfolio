@@ -18,7 +18,7 @@ export default function WorkCardThumb({ item }: Props) {
       <div className="relative overflow-hidden bg-hover" style={{ aspectRatio: '16/10' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`/project-images/${item.slug}-thumb.jpg`}
+          src={`/project-thumbnails/${item.slug}-thumb.png`}
           alt={item.titleFull}
           className="thumb-img w-full h-full object-cover"
           onError={e => { e.currentTarget.style.display = 'none' }}
