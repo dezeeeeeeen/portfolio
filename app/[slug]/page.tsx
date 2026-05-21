@@ -48,7 +48,7 @@ export default async function ProjectPage({ params }: Props) {
           <div className="flex items-center gap-3">
             {project.badge && (
               <span className="hidden items-center gap-1.5 rounded-full border border-border px-2.5 py-0.5 text-[11px] text-muted sm:inline-flex">
-                {project.badge.emoji} {project.badge.text}
+                {project.badge.text}
               </span>
             )}
             <span className="font-mono text-[12px] text-subtle">{project.year}</span>

@@ -33,7 +33,7 @@ export default function WorkCardThumb({ item }: Props) {
       <div className="flex flex-col gap-2 p-4">
         {item.badge && (
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-bg px-2.5 py-0.5 text-[10.5px] text-muted">
-            {item.badge.emoji} {item.badge.text}
+            {item.badge.text}
           </span>
         )}
         <p className="text-[14.5px] font-[450] leading-snug tracking-[-0.015em] text-fg line-clamp-2">
