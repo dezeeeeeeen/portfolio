@@ -72,7 +72,7 @@ export default function Home() {
         />
         
          <ScrollRow>
-  {config.sideProjects.map(item => (
+  {config.featuredWork.map(item => (
     <WorkCardThumb key={item.slug} item={item} />
   ))}
 </ScrollRow>
@@ -86,11 +86,10 @@ export default function Home() {
           href="/sideprojects"
         />
         <ScrollRow>
-  {config.featuredWork.map(item => (
+  {config.sideProjects.map(item => (
     <WorkCardThumb key={item.slug} item={item} />
   ))}
 </ScrollRow>
-      </section>
 
       {/* ── BOOK SHELF ── */}
       <section className="mx-auto mt-12 w-full max-w-site px-6">
